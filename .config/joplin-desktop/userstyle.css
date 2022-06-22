@@ -1,0 +1,62 @@
+/* headers */
+* {
+    font-family: 'Hack NF' !important;
+}
+h1 {
+    font-size: 22pt;
+    color: #8be9fd;
+}
+h2 {
+    font-size: 20pt;
+    margin-top: 2rem;
+    color: #ff79c6;
+}
+h3 {
+    font-size: 18pt;
+    margin-top: 1.8rem;
+    color: #50fa7b;
+}
+h4 {
+    font-size: 16pt;
+    margin-top: 1.6rem;
+    color: #ff5555;
+}
+h5 {
+    font-size: 14pt;
+    margin-top: 1.4rem;
+    color: #ffb86c;
+}
+h6 {
+    font-size: 12pt;
+    margin-top: 1.2rem;
+    color: #bd93f9;
+}
+
+/* code block */
+pre.hljs {
+    background-color: #211f22;
+    padding: 1rem;
+    border: 1px solid #ff79c6;
+    border-radius: 8px;
+    font-family: 'Hack NF';
+}
+
+/* table */
+.jop-tinymce table th, table th {
+    border: 2px solid #8be9fd;
+    font-weight: 600;
+    font-size: 14pt;
+    background-color: #211f22;
+}
+
+.jop-tinymce table tr:nth-child(even), table tr:nth-child(even) {
+    background-color: #3b3d44;
+}
+
+.jop-tinymce table td, table td {
+    border: 1px solid #8be9fd;
+}
+
+table {
+    border: 2px solid #8be9fd;
+}

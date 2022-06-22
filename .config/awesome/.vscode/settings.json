@@ -1,0 +1,9 @@
+{
+    "Lua.completion.autoRequire": false,
+    "Lua.diagnostics.globals": [
+        "awesome",
+        "client",
+        "root",
+        "screen"
+    ]
+}

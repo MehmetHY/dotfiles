@@ -1,0 +1,84 @@
+{
+    "workbench.startupEditor": "none",
+    "workbench.colorTheme": "Dracula",
+    "files.autoSave": "afterDelay",
+    "editor.fontSize": 18,
+    "editor.smoothScrolling": true,
+    "editor.cursorSurroundingLines": 25,
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "workbench.preferredDarkColorTheme": "Dracula",
+    "workbench.preferredHighContrastColorTheme": "Dracula",
+    "workbench.preferredHighContrastLightColorTheme": "Dracula",
+    "workbench.preferredLightColorTheme": "Dracula",
+    "security.workspace.trust.enabled": false,
+    "vim.cursorStylePerMode.insert": "line",
+    "vim.cursorStylePerMode.normal": "block",
+    "vim.cursorStylePerMode.replace": "underline-thin",
+    "vim.cursorStylePerMode.visual": "underline-thin",
+    "vim.cursorStylePerMode.visualblock": "underline-thin",
+    "vim.cursorStylePerMode.visualline": "underline-thin",
+    "vim.enableNeovim": true,
+    "vim.foldfix": true,
+    "vim.highlightedyank.duration": 100,
+    "vim.highlightedyank.enable": true,
+    "vim.highlightedyank.color": "rgba(200, 240, 170, 0.5)",
+    "vim.scroll": 5,
+    "vim.useSystemClipboard": true,
+    "editor.cursorBlinking": "solid",
+    "editor.cursorSmoothCaretAnimation": true,
+    "editor.suggest.localityBonus": true,
+    
+    "vim.leader": "<space>",
+    
+    "vim.commandLineModeKeyBindings": [
+    
+    ],
+    "vim.commandLineModeKeyBindingsNonRecursive": [
+    
+    ],
+    "vim.insertModeKeyBindings": [
+    
+    ],
+    "vim.insertModeKeyBindingsNonRecursive": [
+        { 
+            "before": ["j", "k"],
+            "after": ["<ESC>"]
+        },
+    ],
+    "vim.normalModeKeyBindings": [
+    
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        { 
+            "before": ["<leader>", "w"],
+            "commands": ["workbench.action.closeActiveEditor"]
+        },
+        { 
+            "before": ["<leader>", "<leader>", "w"],
+            "commands": ["workbench.action.closeOtherEditors"]
+        },
+    
+    ],
+    "vim.operatorPendingModeKeyBindings": [
+    
+    ],
+    "vim.operatorPendingModeKeyBindingsNonRecursive": [
+    
+    ],
+    "vim.visualModeKeyBindings": [
+    
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        { 
+            "before": ["<leader>", "j"],
+            "after": ["<ESC>"]
+        },
+    ],
+    "workbench.sideBar.location": "right",
+    "editor.minimap.enabled": false,
+    "editor.fontFamily": "'Hack NF'",
+    "explorer.confirmDelete": false,
+    "workbench.tree.indent": 32,
+    "window.menuBarVisibility": "toggle",
+    "terminal.integrated.fontSize": 16
+}
