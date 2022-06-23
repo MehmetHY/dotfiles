@@ -5,10 +5,10 @@ local binding = require 'binding'
 
 local m = {}
 
-function m.setup(w)
+function m.setup(w, titlebar_size)
     local buttons = binding.titlebar.get_buttons(w)
 
-    awful.titlebar(w, { size = 32 }):setup {
+    awful.titlebar(w, { size = titlebar_size }):setup {
         layout = wibox.layout.align.horizontal,
 
         -- left

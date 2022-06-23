@@ -8,7 +8,11 @@ local m = {
     left = "Left",
     right = "Right",
     space = "space",
-    tab = "Tab"
+    tab = "Tab",
+    volumeup = "XF86AudioRaiseVolume",
+    volumedown = "XF86AudioLowerVolume",
+    brightnessup = "XF86MonBrightnessUp",
+    brightnessdown = "XF86MonBrightnessDown"
 }
 
 return m

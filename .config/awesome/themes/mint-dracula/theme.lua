@@ -1,17 +1,16 @@
 local gears = require 'gears'
 local config = require 'config'
-local theme_assets = require("beautiful.theme_assets")
 local xresources = require("beautiful.xresources")
 local dpi = xresources.apply_dpi
 local theme_path = config.theme_dir
-local color = require 'themes.custom.color'
+local color = require('themes.' .. config.theme .. '.color')
 
 local theme = {}
 
 -- general
 theme.wallpaper = theme_path.."bg.png"
 theme.awesome_icon = theme_path .. "os.svg"
-theme.font          = "JetBrainsMono Nerd Font 8"
+theme.font          = "Hack NF 8"
 
 theme.bg_normal     = color.bg_normal
 theme.bg_focus      = color.bg_focus
@@ -26,6 +25,7 @@ theme.fg_minimize   = color.fg_minimize
 
 theme.useless_gap   = dpi(8)
 
+theme.border_radius  = dpi(16)
 theme.border_width  = dpi(2)
 theme.border_normal = color.border_normal
 theme.border_focus  = color.border_focus
@@ -34,17 +34,17 @@ theme.border_marked = color.highlight
 
 
 -- statusbar
-theme.wibar_height = dpi(24)
+theme.wibar_height = dpi(26)
 
 
 
 -- workspace
-theme.taglist_font = 'JetBrainsMono Nerd Font 14'
+theme.taglist_font = 'Hack NF 24'
 theme.taglist_fg_focus = color.highlight
 theme.taglist_fg_occupied = color.fg_focus
 theme.taglist_fg_empty = color.tag_empty
 theme.taglist_shape = gears.shape.rounded_rect
-theme.taglist_shape_border_width_focus = dpi(2)
+theme.taglist_shape_border_width_focus = dpi(1)
 theme.taglist_shape_border_color_focus = color.alternative
 theme.taglist_shape_border_width_urgent = dpi(2)
 theme.taglist_shape_border_color_urgent = color.border_urgent
@@ -75,13 +75,21 @@ theme.tasklist_shape_border_color_urgent = color.border_urgent
 theme.menu_submenu = "  "
 theme.menu_height = dpi(32)
 theme.menu_width  = dpi(160)
-theme.menu_border_width = dpi(2)
-theme.menu_border_color = color.fg_active
-
+theme.menu_border_width = dpi(1)
+theme.menu_border_color = color.highlight
+theme.menu_icons = {
+    favorite = theme_path .. "menu/favorite.svg",
+    development = theme_path .. "menu/development.svg",
+    web = theme_path .. "menu/web.svg",
+    graphics = theme_path .. "menu/graphics.svg",
+    office = theme_path .. "menu/office.svg",
+    session = theme_path .. "menu/session.svg"
+}
 
 
 -- titlebar
 theme.titlebar_bg = color.bg_normal
+theme.titlebar_size = dpi(26)
 theme.titlebar_close_button_normal = theme_path.."titlebar/unfocus.svg"
 theme.titlebar_close_button_focus = theme_path.."titlebar/close.svg"
 theme.titlebar_close_button_normal_hover = theme_path.."titlebar/unfocus.svg"
@@ -145,11 +153,6 @@ theme.layout_tile = theme_path.."layouts/tileright.svg"
 -- theme.layout_cornersw = theme_path.."layouts/cornersww.png"
 -- theme.layout_cornerse = theme_path.."layouts/cornersew.png"
 
-
--- Generate Awesome icon:
--- theme.awesome_icon = theme_assets.awesome_icon(
---     theme.menu_height, theme.bg_focus, theme.fg_focus
--- )
 
 -- Define the icon theme for application icons. If not set then the icons
 -- from /usr/share/icons and /usr/share/icons/hicolor will be used.

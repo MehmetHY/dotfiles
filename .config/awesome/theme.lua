@@ -5,6 +5,8 @@ local m = {}
 
 function m.init(theme_file)
     beautiful.init(theme_file)
+    m.titlebar_size = beautiful.titlebar_size
+    m.border_radius = beautiful.border_radius
 end
 
 function m.set_wallpaper(s)

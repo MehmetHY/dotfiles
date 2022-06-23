@@ -126,9 +126,9 @@ function m.setup(menu, workspace_count, workspace_apps)
         -- raise volume
         awful.key(
             {},
-            "XF86AudioRaiseVolume",
+            specialkeys.volumeup,
             function()
-                awful.spawn('amixer -q -D pulse sset Master 5%+')
+                awful.spawn('amixer -q -D pulse sset Master 10%+')
             end,
             {
                 description = "raise volume",
@@ -138,9 +138,9 @@ function m.setup(menu, workspace_count, workspace_apps)
 
         awful.key(
             {},
-            "XF86AudioLowerVolume",
+            specialkeys.volumedown,
             function()
-                awful.spawn('amixer -q -D pulse sset Master 5%-')
+                awful.spawn('amixer -q -D pulse sset Master 10%-')
             end,
             {
                 description = "lower volume",
@@ -148,24 +148,53 @@ function m.setup(menu, workspace_count, workspace_apps)
             }
         ),
         
-        -- raise brightness
+        -- raise brightness custom
         awful.key(
             { mod },
             "F3",
             function()
+                -- custom script. use 'xbacklight -inc 1' instead
                 awful.spawn("bash -c 'backlight -a 1'")
+            end,
+            {
+                description = "raise brightness custom script",
+                group = categories.media
+            }
+        ),
+        
+        -- lower brightness custom
+        awful.key(
+            { mod },
+            "F2",
+            function()
+                -- custom script. use 'xbacklight -dec 1' instead
+                awful.spawn("bash -c 'backlight -a -1'")
+            end,
+            {
+                description = "lower brightness custom script",
+                group = categories.media
+            }
+        ),
+
+        -- raise brightness intel
+        awful.key(
+            { mod },
+            specialkeys.brightnessup,
+            function()
+                awful.spawn("xbacklight -inc 1")
             end,
             {
                 description = "raise brightness",
                 group = categories.media
             }
         ),
-
+        
+        -- lower brightness intel
         awful.key(
             { mod },
-            "F2",
+            specialkeys.brightnessdown,
             function()
-                awful.spawn("bash -c 'backlight -a -1'")
+                awful.spawn("xbacklight -inc 1")
             end,
             {
                 description = "lower brightness",

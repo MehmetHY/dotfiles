@@ -41,7 +41,7 @@ s.setup(t.set_wallpaper, ws.set_workspaces, sb.set_statusbar)
 
 -- window
 local w = require 'window'
-w.setup(b.window, c.border_radius)
+w.setup(b.window, t.border_radius, t.titlebar_size)
 
 -- global bindings
 b.global.set_global_bindings()

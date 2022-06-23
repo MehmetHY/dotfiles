@@ -1,5 +1,6 @@
 local awful = require "awful"
 local menubar = require "menubar"
+local beautiful = require "beautiful"
 local hotkeys_popup = require("awful.hotkeys_popup").widget
 
 local m = {}
@@ -60,12 +61,12 @@ function m.setup(terminal)
 
     m.instance = awful.menu {
         items = {
-            { "Favorite", favorite},
-            { "Development", dev},
-            { "Web", web },
-            { "Graphics", graphics },
-            { "Office", office },
-            { "Session", session }
+            { "Favorite", favorite, beautiful.menu_icons.favorite },
+            { "Development", dev, beautiful.menu_icons.development },
+            { "Web", web, beautiful.menu_icons.web },
+            { "Graphics", graphics, beautiful.menu_icons.graphics },
+            { "Office", office, beautiful.menu_icons.office },
+            { "Session", session, beautiful.menu_icons.session }
         }
     }
 

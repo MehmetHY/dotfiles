@@ -1,6 +1,6 @@
 local m = {}
 
-m.highlight = '#60aaff'
+m.highlight = '#8be9fd'
 m.alternative = '#ff79c6'
 
 m.fg_normal = '#dddddd'
