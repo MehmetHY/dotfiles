@@ -14,9 +14,9 @@ m.theme_file = m.theme_dir .. "theme.lua"
 
 m.show_error_popups = true
 
--- Hack Nerd Font works best
-m.workspaces = { "  ", "  ", "  ", "  ", "  ", "  ", "  ", " ﲵ ", "  " }
-m.workspace_apps = { 'codium', 'joplin', 'okular', 'firefox', 'blender', 'inkscape', 'krusader', nil, nil }
+-- works best with Hack Nerd Font
+m.workspaces = { "  ", "  ", "  ", "  ", " ﲵ ", "  ", "  ", "  ", "  " }
+m.workspace_apps = { 'codium', 'joplin', 'okular', 'firefox', nil, 'blender', 'inkscape', 'krusader', nil }
 
 m.layouts = {
     awful.layout.suit.tile,

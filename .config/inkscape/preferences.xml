@@ -119,8 +119,8 @@
          id="rect"
          style="fill:blue;"
          usecurrent="1"
-         width="319.99999432517"
-         height="319.999994325173" />
+         width="42.0381070616738"
+         height="96.7662521944835" />
       <eventcontext
          id="3dbox"
          style="stroke:none;stroke-linejoin:round;"
@@ -156,8 +156,8 @@
          end="0"
          start="0"
          usecurrent="1"
-         rx="79.9999980127236"
-         ry="79.9999980127236" />
+         rx="118.108513912631"
+         ry="118.108513912631" />
       <eventcontext
          id="star"
          magnitude="5"
@@ -186,7 +186,8 @@
          mode="drag"
          selcue="1"
          style="stroke-width:1px;"
-         usecurrent="1" />
+         usecurrent="1"
+         freehand-mode="0" />
     </group>
     <eventcontext
        id="calligraphic"
@@ -330,12 +331,12 @@
        show_outline="0"
        sculpting_profile="1"
        single_node_transform_handles="0"
-       show_transform_handles="0"
+       show_transform_handles="1"
        live_outline="1"
        live_objects="1"
        show_helperpath="0"
-       x="255.999965298688"
-       y="319.999999143045"
+       x="-1.36877320314847"
+       y="180.660351365381"
        edit_clipping_paths="0"
        edit_masks="0" />
     <eventcontext
@@ -544,7 +545,7 @@
        id="toolbox" />
     <group
        id="fillstroke"
-       page="1" />
+       page="2" />
     <group
        id="filtereffects" />
     <group
@@ -554,7 +555,8 @@
        applyseparately="0" />
     <group
        id="align"
-       align-to="4" />
+       align-to="4"
+       align-nodes-to="2" />
     <group
        id="xml"
        h="500"
@@ -958,7 +960,7 @@
        id="rendering" />
     <group
        id="snapping"
-       snap-global-toggle="1"
+       snap-global-toggle="0"
        snap-node-category="1"
        snap-path="1"
        snap-path-intersection="1"
@@ -989,10 +991,12 @@
      org.inkscape.output.png.inkscape.png_compression="6"
      org.inkscape.output.png.inkscape.png_antialias="2"
      org.inkscape.input.svg.scale="auto"
-     org.inkscape.input.svg.do_not_ask="1" />
+     org.inkscape.input.svg.do_not_ask="1"
+     org.inkscape.generate.path_along_path.copymode="Single"
+     org.inkscape.generate.path_along_path.kind="Snake" />
   <group
      id="desktop"
-     style="fill:#9083ce;stroke-width:12;stroke-linecap:round;stroke:#ff79c6;fill-opacity:0">
+     style="fill:none;stroke-width:52;stroke-linecap:round;stroke:#ff5555">
     <group
        width="1880"
        height="978"
@@ -1113,7 +1117,13 @@
      language="" />
   <group
      id="live_effects"
-     flattening="0" />
+     flattening="0">
+    <group
+       id="attach_path" />
+    <group
+       id="skeletal"
+       width="-0.110374671134268" />
+  </group>
   <group
      id="theme"
      defaultPreferDarkTheme="0"
