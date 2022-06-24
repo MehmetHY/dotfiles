@@ -9,26 +9,32 @@ function m.setup(terminal)
     local favorite = {
         { "Firefox", "firefox" },
         { "VS Codium", "codium" },
+        { "QtCreator", "qtcreator" },
         { "Joplin", "joplin" },
         { "Inkscape", "inkscape" },
-        { "QtCreator", "qtcreator" },
+        { "Drawio", "drawio" },
         { "Blender", "blender" },
-        { "Gimp", "flatpak run org.gimp.GIMP" },
+        -- { "Gimp", "flatpak run org.gimp.GIMP" },
+        { "Gimp", "gimp" },
         { "Krita", "krita" },
         { "Xtreme DM", "xdman"},
         { "LibreOffice", "libreoffice" },
-        { "Okular", "okular" }
+        { "Okular", "okular" },
+        { "KDE Connect", "kdeconnect-app" }
     }
     
     local web = {
         { "Firefox", "firefox" },
-        { "Xtreme DM", "xdman"}
+        { "Xtreme DM", "xdman"},
+        { "KDE Connect", "kdeconnect-app" }
     }
 
     local graphics = {
         { "Inkscape", "inkscape" },
+        { "Drawio", "drawio" },
         { "Blender", "blender" },
-        { "Gimp", "flatpak run org.gimp.GIMP" },
+        -- { "Gimp", "flatpak run org.gimp.GIMP" },
+        { "Gimp", "gimp" },
         { "Krita", "krita" }
     }
 

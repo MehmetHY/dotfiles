@@ -128,7 +128,8 @@ function m.setup(menu, workspace_count, workspace_apps)
             {},
             specialkeys.volumeup,
             function()
-                awful.spawn('amixer -q -D pulse sset Master 10%+')
+                -- awful.spawn('amixer -q -D pulse sset Master 10%+')
+                awful.spawn('pamixer -i 5')
             end,
             {
                 description = "raise volume",
@@ -140,7 +141,8 @@ function m.setup(menu, workspace_count, workspace_apps)
             {},
             specialkeys.volumedown,
             function()
-                awful.spawn('amixer -q -D pulse sset Master 10%-')
+                -- awful.spawn('amixer -q -D pulse sset Master 10%-')
+                awful.spawn('pamixer -d 5')
             end,
             {
                 description = "lower volume",
@@ -154,7 +156,8 @@ function m.setup(menu, workspace_count, workspace_apps)
             "F3",
             function()
                 -- custom script. use 'xbacklight -inc 1' instead
-                awful.spawn("bash -c 'backlight -a 1'")
+                -- awful.spawn("bash -c 'backlight -a 1'")
+                awful.spawn("xbacklight -inc 1")
             end,
             {
                 description = "raise brightness custom script",
@@ -168,7 +171,8 @@ function m.setup(menu, workspace_count, workspace_apps)
             "F2",
             function()
                 -- custom script. use 'xbacklight -dec 1' instead
-                awful.spawn("bash -c 'backlight -a -1'")
+                -- awful.spawn("bash -c 'backlight -a -1'")
+                awful.spawn("xbacklight -dec 1")
             end,
             {
                 description = "lower brightness custom script",
@@ -178,7 +182,7 @@ function m.setup(menu, workspace_count, workspace_apps)
 
         -- raise brightness intel
         awful.key(
-            { mod },
+            {},
             specialkeys.brightnessup,
             function()
                 awful.spawn("xbacklight -inc 1")
@@ -191,10 +195,10 @@ function m.setup(menu, workspace_count, workspace_apps)
         
         -- lower brightness intel
         awful.key(
-            { mod },
+            {},
             specialkeys.brightnessdown,
             function()
-                awful.spawn("xbacklight -inc 1")
+                awful.spawn("xbacklight -dec 1")
             end,
             {
                 description = "lower brightness",

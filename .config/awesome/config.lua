@@ -1,7 +1,7 @@
 local awful = require 'awful'
 local m = {}
 
-m.theme = "mint-dracula"
+m.theme = "arch-dracula"
 m.modkey = "Mod4"
 m.terminal = "kitty"
 
@@ -15,8 +15,8 @@ m.theme_file = m.theme_dir .. "theme.lua"
 m.show_error_popups = true
 
 -- works best with Hack Nerd Font
-m.workspaces = { "  ", "  ", "  ", "  ", " ﲵ ", "  ", "  ", "  ", "  " }
-m.workspace_apps = { 'codium', 'joplin', 'okular', 'firefox', nil, 'blender', 'inkscape', 'krusader', nil }
+m.workspaces = { "  ", "  ", "  ", "  ", " ﲵ ", "  ", "  ", "  ", "  " }
+m.workspace_apps = { 'codium', 'joplin', 'okular', 'firefox', nil, 'inkscape', 'blender', 'krusader', nil }
 
 m.layouts = {
     awful.layout.suit.tile,
