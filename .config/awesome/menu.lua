@@ -20,7 +20,8 @@ function m.setup(terminal)
         { "Xtreme DM", "xdman"},
         { "LibreOffice", "libreoffice" },
         { "Okular", "okular" },
-        { "KDE Connect", "kdeconnect-app" }
+        { "KDE Connect", "kdeconnect-app" },
+        { "Steam", "steam" }
     }
     
     local web = {

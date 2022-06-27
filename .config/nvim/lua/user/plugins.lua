@@ -49,7 +49,8 @@ return packer.startup(function(use)
     tag = "v2.*",
     requires = 'kyazdani42/nvim-web-devicons'
   }
-  --   use "moll/vim-bbye"
+
+  use "moll/vim-bbye"
   --   use "nvim-lualine/lualine.nvim"
   --   use "akinsho/toggleterm.nvim"
   --   use "ahmedkhalf/project.nvim"

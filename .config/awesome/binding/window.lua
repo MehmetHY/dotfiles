@@ -115,6 +115,7 @@ m.buttons = gears.table.join(
         1,
         function (w)
             w:emit_signal("request::activate", "mouse_click", {raise = true})
+            w.floating = true
             awful.mouse.client.move(w)
         end
     ),
@@ -125,6 +126,7 @@ m.buttons = gears.table.join(
         3,
         function (w)
             w:emit_signal("request::activate", "mouse_click", {raise = true})
+            w.floating = true
             awful.mouse.client.resize(w)
         end
     )

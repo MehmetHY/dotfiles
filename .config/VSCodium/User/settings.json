@@ -80,5 +80,6 @@
     "explorer.confirmDelete": false,
     "workbench.tree.indent": 32,
     "window.menuBarVisibility": "toggle",
-    "terminal.integrated.fontSize": 16
+    "terminal.integrated.fontSize": 16,
+    "explorer.confirmDragAndDrop": false
 }

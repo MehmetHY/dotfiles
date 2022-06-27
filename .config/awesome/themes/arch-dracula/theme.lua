@@ -34,20 +34,21 @@ theme.border_marked = color.highlight
 
 
 -- statusbar
-theme.wibar_height = dpi(26)
+theme.wibar_height = dpi(16)
 
 
 
 -- workspace
-theme.taglist_font = 'Hack NF 24'
+theme.taglist_font = 'Hack NF 18'
 theme.taglist_fg_focus = color.highlight
+theme.taglist_bg_focus = color.bg_normal
 theme.taglist_fg_occupied = color.fg_focus
 theme.taglist_fg_empty = color.tag_empty
-theme.taglist_shape = gears.shape.rounded_rect
-theme.taglist_shape_border_width_focus = dpi(1)
-theme.taglist_shape_border_color_focus = color.alternative
-theme.taglist_shape_border_width_urgent = dpi(2)
-theme.taglist_shape_border_color_urgent = color.border_urgent
+-- theme.taglist_shape = gears.shape.rounded_rect
+-- theme.taglist_shape_border_width_focus = dpi(1)
+-- theme.taglist_shape_border_color_focus = color.alternative
+-- theme.taglist_shape_border_width_urgent = dpi(2)
+-- theme.taglist_shape_border_color_urgent = color.border_urgent
 -- local taglist_square_size = dpi(4)
 -- theme.taglist_squares_sel = theme_assets.taglist_squares_sel(
 --     taglist_square_size, theme.fg_normal
@@ -59,14 +60,15 @@ theme.taglist_shape_border_color_urgent = color.border_urgent
 
 
 -- tasklist
-theme.tasklist_fg_focus = color.fg_focus
+-- theme.tasklist_fg_focus = color.fg_focus
 -- theme.tasklist_disable_task_name = true
-theme.tasklist_shape = gears.shape.rounded_rect
+-- theme.tasklist_bg_focus = color.bg_normal
+-- theme.tasklist_shape = gears.shape.rounded_rect
 -- theme.tasklist_align = 'center'
-theme.tasklist_shape_border_width = dpi(2)
-theme.tasklist_shape_border_color = color.border_normal
-theme.tasklist_shape_border_color_focus = color.border_focus
-theme.tasklist_shape_border_color_urgent = color.border_urgent
+-- theme.tasklist_shape_border_width = dpi(2)
+-- theme.tasklist_shape_border_color = color.border_normal
+-- theme.tasklist_shape_border_color_focus = color.border_focus
+-- theme.tasklist_shape_border_color_urgent = color.border_urgent
 
 
 

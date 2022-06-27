@@ -46,7 +46,7 @@ function m.set_statusbar(s)
     -- wibox
     s.custom_statusbar = awful.wibar {
         screen = s,
-        position = "top"
+        position = "bottom"
     }
 
     -- add widgets to wibox
@@ -58,7 +58,7 @@ function m.set_statusbar(s)
             s.custom_launcher,
 
             wibox.widget.separator {
-                forced_width = 36,
+                forced_width = 24,
                 shape = gears.shape.rectangle,
                 opacity = 0
             },
@@ -77,8 +77,25 @@ function m.set_statusbar(s)
         
         -- middle widgets
         {
-            layout = wibox.layout.flex.horizontal,
-            s.custom_tasklist,
+            layout = wibox.layout.align.horizontal,
+            {
+                layout = wibox.layout.flex.horizontal,
+                wibox.widget.separator {
+                    shape = gears.shape.rectangle,
+                    opacity = 0
+                },
+                s.custom_tasklist,
+                wibox.widget.separator {
+                    shape = gears.shape.rectangle,
+                    opacity = 0
+                },
+            },
+
+            -- wibox.widget.separator {
+            --     forced_width = 36,
+            --     shape = gears.shape.rectangle,
+            --     opacity = 0
+            -- },
         },
 
 

@@ -27,25 +27,69 @@ vim.g.maplocalleader = " "
 
 -- keymap(mode, key, command, options)
 
--- nvim-tree
+-- test
+keymap("n", "<Leader>yu", "", {
+    noremap = false,
+    callback = function()
+        print('test print')
+    end,
+    silent = true,
+    desc = 'test print'
+})
+
+
+
+
+
+-- explorer
+-- toggle
 keymap("n", "<A-e>", ":NvimTreeToggle<CR>", opts)
+-- refresh
+keymap("n", "<leader>er", ":NvimTreeRefresh<CR>", opts)
+
+
+
+
 
 -- window
-keymap("n", "<leader>h", "<C-w>h", opts)
-keymap("n", "<leader>j", "<C-w>j", opts)
-keymap("n", "<leader>k", "<C-w>k", opts)
-keymap("n", "<leader>l", "<C-w>l", opts)
+-- focus
+keymap("n", "<C-h>", "<C-w>h", opts)
+keymap("n", "<C-j>", "<C-w>j", opts)
+keymap("n", "<C-k>", "<C-w>k", opts)
+keymap("n", "<C-l>", "<C-w>l", opts)
 
-keymap("n", "<C-Up>", ":resize -2<CR>", opts)
-keymap("n", "<C-Down>", ":resize +2<CR>", opts)
-keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
-keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
+-- split
+keymap("n", "<leader>h", ":vsplit<CR>", opts)
+keymap("n", "<leader>l", ":vsplit<CR>", opts)
+keymap("n", "<leader>k", ":split<CR>", opts)
+keymap("n", "<leader>j", ":split<CR>", opts)
+
+-- resize
+keymap("n", "<C-A-k>", ":resize -2<CR>", opts)
+keymap("n", "<C-A-j>", ":resize +2<CR>", opts)
+keymap("n", "<C-A-h>", ":vertical resize -2<CR>", opts)
+keymap("n", "<C-A-l>", ":vertical resize +2<CR>", opts)
+
+-- close
+keymap("n", "<leader>w", ":wq<CR>", opts)
+
+
+
+
 
 -- buffer
+-- show
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
-keymap("n", "<A-w>", ":bdelete<CR>", opts)
+-- close
+keymap("n", "<A-w>", ":Bdelete<CR>", opts)
 
+
+
+
+
+
+-- editor
 -- line movement
 keymap("n", "<A-j>", "<Esc>:m .+1<CR>", opts)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>", opts)
@@ -63,3 +107,13 @@ keymap("v", ">", ">gv", opts)
 
 -- keep buffer after paste
 keymap("v", "p", '"_dP', opts)
+
+
+
+
+
+
+-- terminal
+keymap("t", "jk", "<C-\\><C-n>", opts)
+keymap("t", "<Esc>", "<C-\\><C-n>", opts)
+

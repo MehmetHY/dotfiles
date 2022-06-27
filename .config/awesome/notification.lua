@@ -1,4 +1,6 @@
-local naughty = require("naughty")
+local naughty = require 'naughty'
+local awful = require 'awful'
+local config = require 'config'
 
 local m = {}
 
@@ -34,6 +36,32 @@ local function show_runtime_errors()
             awesome.has_unhandled_errors = false
         end
     )
+end
+
+function m.show_volume()
+    naughty.destroy_all_notifications()
+    awful.spawn.easy_async(config.volume_get_cmd, function (stdout)
+        naughty.notify(
+            {
+                title="volume",
+                text=stdout,
+                timeout=1
+            }
+        )
+    end)
+end
+
+function m.show_brightness()
+    naughty.destroy_all_notifications()
+    awful.spawn.easy_async(config.brightness_get_cmd, function (stdout)
+        naughty.notify(
+            {
+                title="brightness",
+                text=tostring(math.floor(tonumber(stdout))),
+                timeout=1
+            }
+        )
+    end)
 end
 
 function m.setup(show_error_popups)

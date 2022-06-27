@@ -118,6 +118,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/mhy/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
+  },
+  ["vim-bbye"] = {
+    loaded = true,
+    path = "/home/mhy/.local/share/nvim/site/pack/packer/start/vim-bbye",
+    url = "https://github.com/moll/vim-bbye"
   }
 }
 

@@ -1,11 +1,13 @@
 local gears = require 'gears'
 local awful = require 'awful'
+local notification = require 'notification'
 local menubar = require 'menubar'
 local hotkeys_popup = require("awful.hotkeys_popup").widget
 local categories = require 'binding.category'
 local specialkeys = require 'binding.specialkeys'
 local mod = specialkeys.mod
 local terminal = require('config').terminal
+local config = require 'config'
 
 local m = {}
 
@@ -15,6 +17,8 @@ function m.set_global_bindings()
 end
 
 function m.setup(menu, workspace_count, workspace_apps)
+    awful.spawn('numlockx on')
+
     m.keys = gears.table.join(
         -- general      -----------------------------------------------------
         -- show help
@@ -129,7 +133,8 @@ function m.setup(menu, workspace_count, workspace_apps)
             specialkeys.volumeup,
             function()
                 -- awful.spawn('amixer -q -D pulse sset Master 10%+')
-                awful.spawn('pamixer -i 5')
+                awful.spawn(config.volume_up_cmd)
+                notification.show_volume()
             end,
             {
                 description = "raise volume",
@@ -142,7 +147,8 @@ function m.setup(menu, workspace_count, workspace_apps)
             specialkeys.volumedown,
             function()
                 -- awful.spawn('amixer -q -D pulse sset Master 10%-')
-                awful.spawn('pamixer -d 5')
+                awful.spawn(config.volume_down_cmd)
+                notification.show_volume()
             end,
             {
                 description = "lower volume",
@@ -157,7 +163,8 @@ function m.setup(menu, workspace_count, workspace_apps)
             function()
                 -- custom script. use 'xbacklight -inc 1' instead
                 -- awful.spawn("bash -c 'backlight -a 1'")
-                awful.spawn("xbacklight -inc 1")
+                awful.spawn(config.brightness_up_cmd)
+                notification.show_brightness()
             end,
             {
                 description = "raise brightness custom script",
@@ -172,7 +179,8 @@ function m.setup(menu, workspace_count, workspace_apps)
             function()
                 -- custom script. use 'xbacklight -dec 1' instead
                 -- awful.spawn("bash -c 'backlight -a -1'")
-                awful.spawn("xbacklight -dec 1")
+                awful.spawn(config.brightness_down_cmd)
+                notification.show_brightness()
             end,
             {
                 description = "lower brightness custom script",
@@ -185,7 +193,8 @@ function m.setup(menu, workspace_count, workspace_apps)
             {},
             specialkeys.brightnessup,
             function()
-                awful.spawn("xbacklight -inc 1")
+                awful.spawn(config.brightness_up_cmd)
+                notification.show_brightness()
             end,
             {
                 description = "raise brightness",
@@ -198,7 +207,8 @@ function m.setup(menu, workspace_count, workspace_apps)
             {},
             specialkeys.brightnessdown,
             function()
-                awful.spawn("xbacklight -dec 1")
+                awful.spawn(config.brightness_down_cmd)
+                notification.show_brightness()
             end,
             {
                 description = "lower brightness",
