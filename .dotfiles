@@ -4,3 +4,4 @@
 .zsh_plugins.txt
 .zshrc
 scripts
+.p10k.zsh

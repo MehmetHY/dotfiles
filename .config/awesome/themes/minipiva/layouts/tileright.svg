@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="512"
+   height="512"
+   viewBox="0 0 135.46666 135.46667"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2 (dc2aeda, 2022-05-15)"
+   sodipodi:docname="tileright.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#282a36"
+     bordercolor="#ff79c6"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#282a36"
+     inkscape:document-units="px"
+     showgrid="true"
+     showborder="false"
+     inkscape:zoom="1.4846889"
+     inkscape:cx="202.73607"
+     inkscape:cy="264.36515"
+     inkscape:window-width="1914"
+     inkscape:window-height="1018"
+     inkscape:window-x="0"
+     inkscape:window-y="30"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid129"
+       color="#737373"
+       opacity="0.14901961"
+       empspacing="0"
+       spacingx="8.4666666"
+       spacingy="8.4666666"
+       originx="8.4666659"
+       originy="-33.866666" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(8.4666662,-33.866665)">
+    <g
+       id="g976"
+       style="fill:#8be9fd">
+      <rect
+         style="fill:#8be9fd;stroke:none;stroke-width:2.11667"
+         id="rect853"
+         width="8.4666662"
+         height="25.4"
+         x="-8.4666662"
+         y="33.866665" />
+      <rect
+         style="fill:#8be9fd;stroke:none;stroke-width:2.11667"
+         id="rect907"
+         width="16.933332"
+         height="8.4666662"
+         x="-1.4465266e-07"
+         y="33.866665" />
+      <rect
+         style="fill:#8be9fd;stroke:none;stroke-width:2.11667"
+         id="rect909"
+         width="8.4666662"
+         height="25.4"
+         x="-8.4666662"
+         y="143.93333" />
+      <rect
+         style="fill:#8be9fd;stroke:none;stroke-width:2.11667"
+         id="rect911"
+         width="16.933332"
+         height="8.4666662"
+         x="-1.4465266e-07"
+         y="160.86667" />
+      <rect
+         style="fill:#8be9fd;stroke:none;stroke-width:2.11667"
+         id="rect913"
+         width="25.4"
+         height="8.4666662"
+         x="101.6"
+         y="160.86667" />
+      <rect
+         style="fill:#8be9fd;stroke:none;stroke-width:2.11667"
+         id="rect915"
+         width="8.4666662"
+         height="16.933332"
+         x="118.53333"
+         y="143.93333" />
+      <rect
+         style="fill:#8be9fd;stroke:none;stroke-width:2.11667"
+         id="rect917"
+         width="8.4666662"
+         height="25.4"
+         x="118.53333"
+         y="33.866665" />
+      <rect
+         style="fill:#8be9fd;stroke:none;stroke-width:2.11667"
+         id="rect919"
+         width="16.933332"
+         height="8.4666662"
+         x="101.6"
+         y="33.866665" />
+    </g>
+    <rect
+       style="fill:#50fa7b;stroke:none;stroke-width:2.56341"
+       id="rect921"
+       width="33.866665"
+       height="93.133331"
+       x="12.7"
+       y="55.033329" />
+    <rect
+       style="fill:#ff79c6;stroke:none;stroke-width:2.11667"
+       id="rect923"
+       width="50.799999"
+       height="25.4"
+       x="55.033333"
+       y="55.033329" />
+    <rect
+       style="fill:#ff79c6;stroke:none;stroke-width:2.11666"
+       id="rect925"
+       width="50.799999"
+       height="25.4"
+       x="55.033333"
+       y="122.76666" />
+    <rect
+       style="fill:#ff79c6;stroke:none;stroke-width:2.11667"
+       id="rect927"
+       width="50.799999"
+       height="25.399996"
+       x="55.033333"
+       y="88.900002" />
+  </g>
+</svg>

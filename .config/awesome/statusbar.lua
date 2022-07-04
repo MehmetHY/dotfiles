@@ -2,6 +2,7 @@ local awful = require 'awful'
 local wibox = require 'wibox'
 local beautiful = require 'beautiful'
 local gears = require 'gears'
+local tasklistwidget = require 'widgets.tasklist'
 
 local m = {}
 
@@ -10,7 +11,8 @@ function m.setup(workspace_bindings, tasklist_bindings, layout_bindings, menu)
     m.tasklist_bindings = tasklist_bindings
     m.layout_bindings = layout_bindings
     m.keyboardlayout = awful.widget.keyboardlayout()
-    m.clock = awful.widget.textclock()
+    m.clock = awful.widget.textclock("%H:%M")
+    m.clock.font = "sans bold 12"
     m.systray = wibox.widget.systray()
     m.menu = menu
 end
@@ -32,12 +34,7 @@ function m.set_statusbar(s)
         buttons = m.workspace_bindings.buttons
     }
 
-    -- tasklist
-    s.custom_tasklist = awful.widget.tasklist {
-        screen = s,
-        filter  = awful.widget.tasklist.filter.currenttags,
-        buttons = m.tasklist_bindings.buttons
-    }
+    s.custom_tasklist = tasklistwidget.create(s, m.tasklist_bindings.buttons)
 
     -- layoutbox
     s.custom_layoutbox = awful.widget.layoutbox(s)
@@ -51,68 +48,79 @@ function m.set_statusbar(s)
 
     -- add widgets to wibox
     s.custom_statusbar:setup {
-        layout =  wibox.layout.align.horizontal,
-
-        -- left widgets
-        {
-            s.custom_launcher,
-
-            wibox.widget.separator {
-                forced_width = 24,
-                shape = gears.shape.rectangle,
-                opacity = 0
-            },
-
-            layout = wibox.layout.fixed.horizontal,
-            s.custom_workspacelist,
-            s.custom_prompt,
-
-            wibox.widget.separator {
-                forced_width = 36,
-                shape = gears.shape.rectangle,
-                opacity = 0
-            },
-        },
-
+        widget = wibox.container.margin,
+        left = 8,
+        right = 8,
+        top = 0,
+        bottom = 8,
         
-        -- middle widgets
         {
-            layout = wibox.layout.align.horizontal,
+            widget = wibox.container.background,
+            bg = "#333443",
+            shape = function (cr, w, h) gears.shape.rounded_rect(cr, w, h, 16) end,
+
             {
-                layout = wibox.layout.flex.horizontal,
-                wibox.widget.separator {
-                    shape = gears.shape.rectangle,
-                    opacity = 0
-                },
-                s.custom_tasklist,
-                wibox.widget.separator {
-                    shape = gears.shape.rectangle,
-                    opacity = 0
-                },
-            },
+                widget = wibox.container.margin,
+                left = 12,
+                right = 16,
 
-            -- wibox.widget.separator {
-            --     forced_width = 36,
-            --     shape = gears.shape.rectangle,
-            --     opacity = 0
-            -- },
-        },
+                {
+                    layout =  wibox.layout.align.horizontal,
+            
+                    {
+                        layout = wibox.layout.fixed.horizontal,
+                        spacing = 8,
+                        {
+                            widget = s.custom_launcher,
+                            
+                        },
+                        {
+                            widget = s.custom_workspacelist,
+                        }
+                    },
+            
+                    
+                    {
+                        layout = wibox.layout.fixed.horizontal,
+                        {
+                            widget = wibox.container.margin,
+                            right = 24
+                        },
+                        {
+                            widget = s.custom_tasklist
+                        },
+                    },
+                    
+            
+                    {
+                        layout = wibox.layout.fixed.horizontal,
+                        spacing = 8,
+                        {
+                            widget = wibox.container.margin,
+                            left = 24
+                        },
+                        {
+                            widget = m.keyboardlayout,
+                        },
+                        {
+                            widget = wibox.container.margin,
+                            top = 4,
+                            bottom = 4,
+                            left = 8,
+                            right = 8,
+                            {
+                                widget = m.systray,
+                            }
+                        },
+                        {
+                            widget = m.clock,
+                        },
+                    }
+                }
+            }
 
-
-        -- right widgets
-        {
-            layout = wibox.layout.fixed.horizontal,
-            -- layout = wibox.layout.fixed.horizontal,
-            wibox.widget.separator {
-                forced_width = 36,
-                shape = gears.shape.rectangle,
-                opacity = 0
-            },
-            m.keyboardlayout,
-            m.systray,
-            m.clock,
-            s.custom_layoutbox
         }
+
     }
 end
 

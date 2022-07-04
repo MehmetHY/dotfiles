@@ -1,7 +1,7 @@
 local awful = require 'awful'
 local m = {}
 
-m.theme = "arch-dracula"
+m.theme = "minipiva"
 m.modkey = "Mod4"
 m.terminal = "kitty"
 
@@ -16,8 +16,10 @@ m.show_error_popups = true
 
 -- works best with Hack Nerd Font
 -- m.workspaces = { "  ", "  ", "  ", "  ", " ﲵ ", "  ", "  ", "  ", "  " }
-m.workspaces = { "", "", "", "", "ﲵ", "", "", "", "" }
+m.workspaces = { "", "", "", "", "", "", "", "", "" }
 m.workspace_apps = { 'codium', 'joplin', 'okular', 'firefox', nil, 'inkscape', 'blender', 'krusader', 'steam' }
+-- icons/<your icon>.svg
+m.tag_icons = { 'dev', 'note', 'book', 'web', "console", '2d', '3d', 'explorer', 'game' }
 
 m.layouts = {
     awful.layout.suit.tile,
@@ -38,12 +40,15 @@ m.layouts = {
     -- awful.layout.suit.corner.se,
 }
 
-m.volume_up_cmd = "pamixer -i 5"
-m.volume_down_cmd = "pamixer -d 5"
-m.volume_get_cmd = "pamixer --get-volume-human"
+m.volume_up_cmd = 'sh -c "pamixer -i 5"'
+m.volume_down_cmd = 'sh -c "pamixer -d 5"'
+m.volume_get_cmd = 'sh -c "pamixer --get-volume-human"'
 
-m.brightness_up_cmd = "xbacklight -inc 1"
-m.brightness_down_cmd = "xbacklight -dec 1"
-m.brightness_get_cmd = "xbacklight -get"
+-- m.brightness_up_cmd = "xbacklight -inc 1"
+-- m.brightness_down_cmd = "xbacklight -dec 1"
+-- m.brightness_get_cmd = "xbacklight -get"
+m.brightness_get_cmd = 'sh -c "xbacklight -get"'
+m.brightness_up_cmd = 'sh -c "xbacklight -inc 1"'
+m.brightness_down_cmd = 'sh -c "xbacklight -dec 1"'
 
 return m

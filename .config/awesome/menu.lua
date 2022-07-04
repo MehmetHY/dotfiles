@@ -1,6 +1,6 @@
 local awful = require "awful"
-local menubar = require "menubar"
 local beautiful = require "beautiful"
+local menubar = require "menubar"
 local hotkeys_popup = require("awful.hotkeys_popup").widget
 
 local m = {}

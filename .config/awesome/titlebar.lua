@@ -11,12 +11,6 @@ function m.setup(w, titlebar_size)
     awful.titlebar(w, { size = titlebar_size }):setup {
         layout = wibox.layout.align.horizontal,
 
-        -- left
-        -- {
-        --     layout  = wibox.layout.fixed.horizontal,
-        --     awful.titlebar.widget.iconwidget(w),
-        --     buttons = buttons
-        -- },
         {
             layout  = wibox.layout.fixed.horizontal,
             wibox.widget.separator {
@@ -29,7 +23,6 @@ function m.setup(w, titlebar_size)
             awful.titlebar.widget.minimizebutton(w)
         },
 
-        -- middle
         {
             layout  = wibox.layout.flex.horizontal,
 
@@ -39,15 +32,6 @@ function m.setup(w, titlebar_size)
             },
 
             buttons = buttons
-        },
-
-        -- right
-        {
-            spacing = 4,
-            layout = wibox.layout.fixed.horizontal(),
-            -- awful.titlebar.widget.floatingbutton(w),
-            -- awful.titlebar.widget.stickybutton(w),
-            -- awful.titlebar.widget.ontopbutton(w)
         }
     }
 end

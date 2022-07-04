@@ -33,6 +33,7 @@ local function prevent_offscreen(w)
     end
 end
 
+
 local function setup_signals(titlebar_size)
     client.connect_signal(
         "manage",
@@ -46,7 +47,12 @@ local function setup_signals(titlebar_size)
         end
     )
 
-    client.connect_signal("request::titlebars", function(w) titlebar.setup(w, titlebar_size) end)
+    client.connect_signal(
+        "request::titlebars",
+        function(w)
+            titlebar.setup(w, titlebar_size)
+        end
+    )
 
     -- Enable sloppy focus, so that focus follows mouse.
     client.connect_signal("mouse::enter", function(w)

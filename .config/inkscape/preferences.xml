@@ -119,12 +119,14 @@
          id="rect"
          style="fill:blue;"
          usecurrent="1"
-         width="759.675329869975"
-         height="759.675329869959" />
+         width="136.30926344961"
+         height="125.786192031081"
+         ry="0" />
       <eventcontext
          id="3dbox"
          style="stroke:none;stroke-linejoin:round;"
-         usecurrent="1">
+         usecurrent="1"
+         persp="perspective5032">
         <side
            id="XYfront"
            style="fill:#8686bf;stroke:none;stroke-linejoin:round;"
@@ -156,14 +158,15 @@
          end="0"
          start="0"
          usecurrent="1"
-         rx="118.108513912631"
-         ry="118.108513912631" />
+         rx="9.97519768199294"
+         ry="9.97519768199302" />
       <eventcontext
          id="star"
          magnitude="5"
          style="fill:yellow;"
          usecurrent="1"
-         proportion="0.499999952755908" />
+         proportion="0.499999959164969"
+         isflatsided="0" />
       <eventcontext
          id="spiral"
          style="fill:none;stroke:black"
@@ -338,8 +341,8 @@
        live_outline="1"
        live_objects="1"
        show_helperpath="0"
-       x="-296.663743196201"
-       y="503.261613579243"
+       x="201.996025162353"
+       y="641.999253812997"
        edit_clipping_paths="0"
        edit_masks="0" />
     <eventcontext
@@ -525,7 +528,7 @@
   </group>
   <group
      id="colorselector"
-     page="0"
+     page="2"
      switcher="1" />
   <group
      id="embedded">
@@ -535,7 +538,7 @@
        panel_mode="1"
        panel_ratio="100"
        panel_wrap="0"
-       palette="dracula.gpl"
+       palette="minipiva.gpl"
        tile_size="16"
        tile_aspect="0"
        tile_border="1"
@@ -548,7 +551,7 @@
        id="toolbox" />
     <group
        id="fillstroke"
-       page="2" />
+       page="1" />
     <group
        id="filtereffects" />
     <group
@@ -577,7 +580,7 @@
     <group
        id="preferences"
        state="1"
-       page="24" />
+       page="25" />
     <group
        id="gradienteditor" />
     <group
@@ -602,7 +605,7 @@
        default="org.inkscape.output.svg.inkscape"
        append_extension="1"
        enable_preview="1"
-       path="/home/mhy/2d/background"
+       path="/home/mhy/dotfiles/.config/awesome/themes/minipiva/icons"
        use_current_dir="1" />
     <group
        id="save_copy"
@@ -613,11 +616,11 @@
     <group
        id="open"
        enable_preview="1"
-       path="/home/mhy/dotfiles/.config/awesome/themes/mint-dracula/" />
+       path="/home/mhy/2d/theme/" />
     <group
        id="import"
        enable_preview="1"
-       path="/home/mhy/2d/logo/"
+       path="/home/mhy/dotfiles/.config/awesome/themes/minipiva/icons/"
        ask="1"
        ask_svg="0"
        link="link"
@@ -963,8 +966,8 @@
        id="rendering" />
     <group
        id="snapping"
-       snap-global-toggle="0"
-       snap-node-category="1"
+       snap-global-toggle="1"
+       snap-node-category="0"
        snap-path="1"
        snap-path-intersection="1"
        snap-node-cusp="1"
@@ -973,20 +976,21 @@
        snap-line-tangential="0"
        snap-line-perpendicular="0"
        simple-snap-nodes="0"
-       snap-others="1"
+       snap-others="0"
        snap-object-midpoint="0"
        snap-rotation-center="0"
        snap-text-baseline="1"
        snap-path-mask="1"
        snap-path-clip="1"
-       snap-page-border="0"
+       snap-page-border="1"
        snap-grid="1"
        snap-guide="0"
-       snap-alignment="0"
-       snap-alignment-self="0"
+       snap-alignment="1"
+       snap-alignment-self="1"
        snap-distribution="1"
        simple-snap-alignment="1"
-       snap-bbox-edge="1" />
+       snap-bbox-edge="1"
+       snap-bbox="1" />
   </group>
   <group
      id="extensions"
@@ -1010,12 +1014,12 @@
      org.inkscape.effect.filter.ColorDropShadow.yoffset="0" />
   <group
      id="desktop"
-     style="fill:#bdbfd1;stroke-width:16;stroke-linecap:round;stroke:#8be9fd">
+     style="fill:#ffc202;stroke-width:45.35433071;font-size:24px;stroke-linecap:square">
     <group
-       width="1874"
-       height="968"
-       x="20"
-       y="53"
+       width="1900"
+       height="977"
+       x="10"
+       y="10"
        maximized="1"
        fullscreen="0"
        id="geometry" />
@@ -1044,8 +1048,8 @@
        id="tools"
        icononly="1"
        small="0"
-       iconsize="32"
-       width="79">
+       iconsize="29"
+       width="52">
       <group
          id="buttons" />
     </group>
@@ -1144,21 +1148,24 @@
   <group
      id="theme"
      defaultPreferDarkTheme="0"
-     defaultIconTheme="dracula"
-     defaultGtkTheme="dracula"
+     defaultIconTheme="oomox-Minipiva"
+     defaultGtkTheme="minipiva"
      narrowSpinButton="1"
      preferDarkTheme="0"
      darkTheme="1"
      symbolicIcons="1"
      symbolicDefaultBaseColors="1"
      symbolicDefaultHighColors="0"
-     iconTheme="multicolor">
+     iconTheme="hicolor">
     <group
        id="multicolor"
-       symbolicBaseColor="255"
+       symbolicBaseColor="3958107135"
        symbolicSuccessColor="10029823"
        symbolicWarningColor="4279865599"
        symbolicErrorColor="10086143" />
+    <group
+       id="hicolor"
+       symbolicBaseColor="3873492479" />
   </group>
   <group
      id="color_scales"

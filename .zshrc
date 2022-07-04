@@ -1,4 +1,5 @@
 export PATH="$PATH:$HOME/.emacs.d/bin"
+export QT_QPA_PLATFORMTHEME="qt5ct"
 
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
@@ -69,6 +70,11 @@ alias pacmans="pacman --color always -Ss"
 alias pacmanq="pacman --color always -Qs"
 alias pacmani="sudo pacman --color always --disable-download-timeout -S"
 alias pacmanu="sudo pacman --color always --disable-download-timeout -Syu"
+alias pacmanr="sudo pacman --color always -R"
+# remove with dependencies
+alias pacmanrc="sudo pacman --color always -Rc"
+# clean
+alias pacmanc="sudo pacman --color always -Sc"
 
 alias pamacs="pamac search -a"
 alias pamacl="pamac list -i"
@@ -97,3 +103,5 @@ alias nano="nvim"
 
 alias findf="sudo find / -type f -nowarn -iname"
 alias findd="sudo find / -type d -nowarn -iname"
+
+alias aria2c="aria2c -x 16 -s 16 -j 16 -m 0 -t 1800"

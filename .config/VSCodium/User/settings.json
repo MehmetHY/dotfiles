@@ -1,15 +1,14 @@
 {
     "workbench.startupEditor": "none",
-    "workbench.colorTheme": "Dracula",
     "files.autoSave": "afterDelay",
     "editor.fontSize": 18,
     "editor.smoothScrolling": true,
     "editor.cursorSurroundingLines": 25,
     "editor.acceptSuggestionOnCommitCharacter": false,
-    "workbench.preferredDarkColorTheme": "Dracula",
-    "workbench.preferredHighContrastColorTheme": "Dracula",
-    "workbench.preferredHighContrastLightColorTheme": "Dracula",
-    "workbench.preferredLightColorTheme": "Dracula",
+    "workbench.preferredDarkColorTheme": "minipiva",
+    "workbench.preferredHighContrastColorTheme": "minipiva",
+    "workbench.preferredHighContrastLightColorTheme": "minipiva",
+    "workbench.preferredLightColorTheme": "minipiva",
     "security.workspace.trust.enabled": false,
     "vim.cursorStylePerMode.insert": "line",
     "vim.cursorStylePerMode.normal": "block",
@@ -57,6 +56,14 @@
             "before": ["<leader>", "<leader>", "w"],
             "commands": ["workbench.action.closeOtherEditors"]
         },
+        {
+            "before": ["<S-h>"],
+            "commands": ["workbench.action.previousEditor"]
+        },
+        {
+            "before": ["<S-l>"],
+            "commands": ["workbench.action.nextEditor"]
+        }
     
     ],
     "vim.operatorPendingModeKeyBindings": [
@@ -73,13 +80,27 @@
             "before": ["<leader>", "j"],
             "after": ["<ESC>"]
         },
+        {
+            "before": ["<S-h>"],
+            "commands": ["workbench.action.previousEditor"]
+        },
+        {
+            "before": ["<S-l>"],
+            "commands": ["workbench.action.nextEditor"]
+        }
     ],
     "workbench.sideBar.location": "right",
     "editor.minimap.enabled": false,
     "editor.fontFamily": "'Hack NF'",
     "explorer.confirmDelete": false,
-    "workbench.tree.indent": 32,
+    "workbench.tree.indent": 18,
     "window.menuBarVisibility": "toggle",
     "terminal.integrated.fontSize": 16,
-    "explorer.confirmDragAndDrop": false
+    "explorer.confirmDragAndDrop": false,
+    "workbench.colorTheme": "minipiva",
+    "explorer.enableUndo": false,
+    "workbench.iconTheme": "vscode-great-icons",
+    "explorer.compactFolders": false,
+    "workbench.list.smoothScrolling": true,
+    "workbench.editor.showIcons": false
 }

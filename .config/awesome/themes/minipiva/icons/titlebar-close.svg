@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="512"
+   height="512"
+   viewBox="0 0 135.46666 135.46667"
+   version="1.1"
+   id="svg1837"
+   xml:space="preserve"
+   inkscape:export-filename="titlebar-button.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
+     id="namedview1839"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="px"
+     showgrid="false" /><defs
+     id="defs1834" /><g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"><path
+       id="path1839"
+       style="fill:#e6e0cd;fill-opacity:1;stroke-width:3.52778"
+       d="M 67.733329,25.399997 A 42.333332,42.333332 0 0 0 25.399997,67.733327 42.333332,42.333332 0 0 0 67.733329,110.06667 42.333332,42.333332 0 0 0 110.06667,67.733327 42.333332,42.333332 0 0 0 67.733329,25.399997 Z m -15.834692,17.87178 15.834176,15.83469 15.835725,-15.83469 8.626347,8.62635 -15.834692,15.83469 15.834692,15.83572 -8.626347,8.62635 -15.835725,-15.83469 -15.834176,15.83469 -8.626863,-8.62635 15.835209,-15.83572 -15.835209,-15.83469 z" /></g></svg>

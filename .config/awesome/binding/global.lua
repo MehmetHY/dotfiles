@@ -17,7 +17,7 @@ function m.set_global_bindings()
 end
 
 function m.setup(menu, workspace_count, workspace_apps)
-    awful.spawn('numlockx on')
+    awful.spawn("sh -c 'numlockx on'")
 
     m.keys = gears.table.join(
         -- general      -----------------------------------------------------
@@ -125,38 +125,6 @@ function m.setup(menu, workspace_count, workspace_apps)
             }
         ),
 
-
-        -- Media        -----------------------------------------------------
-        -- raise volume
-        awful.key(
-            {},
-            specialkeys.volumeup,
-            function()
-                -- awful.spawn('amixer -q -D pulse sset Master 10%+')
-                awful.spawn(config.volume_up_cmd)
-                notification.show_volume()
-            end,
-            {
-                description = "raise volume",
-                group = categories.media
-            }
-        ),
-
-        awful.key(
-            {},
-            specialkeys.volumedown,
-            function()
-                -- awful.spawn('amixer -q -D pulse sset Master 10%-')
-                awful.spawn(config.volume_down_cmd)
-                notification.show_volume()
-            end,
-            {
-                description = "lower volume",
-                group = categories.media
-            }
-        ),
-        
-        -- raise brightness custom
         awful.key(
             { mod },
             "F3",
@@ -500,7 +468,7 @@ function m.setup(menu, workspace_count, workspace_apps)
             { mod },
             'e',
             function ()
-                awful.spawn('krusader')
+                awful.spawn(terminal .. ' -e ranger')
             end,
             {
                 description = "open file explorer",

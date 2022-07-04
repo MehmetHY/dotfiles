@@ -1,134 +1,99 @@
-/*******************************************************************************
+/**
  * ROFI Color theme
- * Theme designed to show off moving, packing of widgets, icons and more.
- * User: DaveDavenport
- * Copyright: DaveDavenport
- ********************************************************************************/
-* {
-    font: "JetbrainsMono Nerd Font 14";
-    foreground:                  #dddddd;
-    normal-foreground:           @foreground;
-    active-foreground:           #ffffff;
-    urgent-foreground:           #ff5555;
-    selected-normal-foreground:  @normal-foreground;
-    selected-active-foreground:  @active-foreground;
-    selected-urgent-foreground:  @urgent-foreground;
-    alternate-normal-foreground: @foreground;
-    alternate-active-foreground: @active-foreground;
-    alternate-urgent-foreground: @urgent-foreground;
+ * User: Qball
+ * Copyright: Dave Davenport
+ */
 
-    background:                  #282a36;
+* {
+
+    foreground:                  #e6e0cd;
+    background:                  #333443;
+
+    normal-foreground:           @foreground;
     normal-background:           @background;
+    
+    active-foreground:           @foreground;
     active-background:           @background;
+
+    urgent-foreground:           @foreground;
     urgent-background:           @background;
-    selected-normal-background:  #454254;
-    selected-active-background:  @background;
-    selected-urgent-background:  @background;
+
+    selected-normal-foreground:  @background;
+    selected-normal-background:  @foreground;
+
+    selected-active-foreground:  @background;
+    selected-active-background:  @foreground;
+
+    selected-urgent-foreground:  @background;
+    selected-urgent-background:  @foreground;
+    
+    alternate-normal-foreground: @foreground;
     alternate-normal-background: @background;
+    
+    alternate-active-foreground: @foreground;
     alternate-active-background: @background;
+
+    alternate-urgent-foreground: @foreground;
     alternate-urgent-background: @background;
+
+    lightfg:                     @foreground;
     lightbg:                     @background;
 
-    bordercolor:                 #ff79c6;
-    selected-bordercolor:        #50fa7b;
-    alternate-bordercolor:       #8be9fd;
-    separatorcolor:              #8be9fd;
-    background-color:            transparent;
-    text-color:                  @foreground;
+    background-color:            @background;
+
+    red:                         #ffc202;
+    blue:                        #4cbbff;
+
+    spacing:                     2;
+    separatorcolor:              @foreground;
+
+    bordercolor:                 @foreground;
+    border-color:                @foreground;
+
+    font: "mono 16";
 }
+
 window {
-    border-color:     @bordercolor;
     background-color: @background;
-    border:           2px;
-    padding:          8px;
-    border-radius:    16px;
-    padding:          16px;
-    spacing:          0px;
-
-    anchor:         north;
-    location:       center;
-    y-offset:       -15.5em;
-
-
-    children: [ inputbar, message, wrapper-mode-switcher, listview ];
+    border:           2;
+    padding:          8;
+    border-radius: 16;
 }
 
-
-
-wrapper-mode-switcher {
-    orientation: horizontal;
-
-    expand:     false;
-    spacing:    0;
-    children: [ icon-ms-ic1, mode-switcher, icon-ms-ic2 ];
-}
-icon-ms-ic1 {
-    filename: "go-previous";
-}
-icon-ms-ic2 {
-    filename: "go-next";
-}
-icon-ms-ic1,icon-ms-ic2 {
-    size: 16;
-    vertical-align: 0.8;
-    expand:        false;
-    border:       0px 0px 2px ;
-    border-color: @separatorcolor;
-}
-
-mode-switcher {
-    border:  0px;
-    spacing: 0px;
-    expand: true;
-}
-
-button {
-    text-color:   @foreground;
-    padding:      2px;
-    border:       0px 0px 2px ;
-    border-color: @separatorcolor;
-}
-button selected.normal {
-    text-color: black;
-    background-color: @separatorcolor;
-
-    border:       2px 2px 0px ;
-    border-color: @separatorcolor;
-    border-radius:    10px 10px 0 0;
-}
-
-
-sidebar {
-    expand: false;
+mainbox {
+    border:  0;
+    padding: 0;
 }
 
 message {
-    text-color:       @foreground;
-    background-color: @background;
-    border-color:     @selected-bordercolor;
-    border:           2px;
-    border-radius:    5px;
-    padding:          4px;
-    margin:           0px 0px 0.5em;
-    expand:           false;
+    border:       2px 0px 0px ;
+    border-color: @separatorcolor;
+    padding:      1px ;
+}
+
+textbox {
+    text-color: @foreground;
 }
 
 listview {
-    spacing:      2px ;
-    scrollbar:    false;
-    padding:      0.5em;
-    background-color: @background;
-
-    expand:       true;
-    border:       0px 2px 2px ;
+    fixed-height: 0;
+    border:       2px 0px 0px ;
     border-color: @separatorcolor;
-    border-radius: 0px 0px 10px 10px;
+    spacing:      2px ;
+    scrollbar:    true;
+    padding:      8px;
 }
+
 element {
-    border:  1;
-    border-color: transparent;
-    padding: 4px ;
+    border:  0;
+    padding: 1px ;
 }
+
+element-text {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
 element.normal.normal {
     background-color: @normal-background;
     text-color:       @normal-foreground;
@@ -142,20 +107,14 @@ element.normal.active {
     text-color:       @active-foreground;
 }
 element.selected.normal {
-    border:  1;
-    border-color: @bordercolor;
     background-color: @selected-normal-background;
     text-color:       @selected-normal-foreground;
 }
 element.selected.urgent {
-    border:  1;
-    border-color: grey/80%;
     background-color: @selected-urgent-background;
     text-color:       @selected-urgent-foreground;
 }
 element.selected.active {
-    border:  1;
-    border-color: grey/80%;
     background-color: @selected-active-background;
     text-color:       @selected-active-foreground;
 }
@@ -177,50 +136,37 @@ scrollbar {
     handle-width: 8px ;
     padding:      0;
 }
-sidebar {
+mode-switcher {
     border:       2px 0px 0px ;
     border-color: @separatorcolor;
 }
+button.selected {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
 inputbar {
-    text-color: white;
-    padding: 0px 0px 0.5em;
+    spacing:    0;
+    text-color: @normal-foreground;
+    padding:    1px ;
 }
 case-indicator {
+    spacing:    0;
     text-color: @normal-foreground;
 }
-
-wrapper {
-    orientation: horizontal;
-    text-color:       @foreground;
-    background-color: @background;
-    border-color:     @selected-bordercolor;
-
-    border: 2px;
-    border-radius: 5px;
-    padding: 12px;
-    children:   [ entry ];
-    spacing:  0.5em;
-}
-icon-k {
-    expand: false;
-    filename: "input-keyboard";
-    size: 24;
-    vertical-align: 0.5;
-
-}
 entry {
-    vertical-align: 0.5;
+    spacing:    0;
+    text-color: @normal-foreground;
+}
+prompt {
+    spacing:    0;
+    text-color: @normal-foreground;
 }
 inputbar {
-    children:   [ wrapper ];
+    children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
 }
-
-error-message {
-    background-color: @background;
-    border-color: @selected-bordercolor;
-    border-radius: 10px;
-    border: 2px;
-    padding: 0.5em;
-
+textbox-prompt-colon {
+    expand:     false;
+    str:        ":";
+    margin:     0px 0.3em 0em 0em ;
+    text-color: @normal-foreground;
 }
-
