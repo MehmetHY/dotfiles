@@ -1,4 +1,5 @@
-*
-*/
+/*
 !.gitignore
+!qtcreator/
+qtcreator/*
 !qtcreator/styles/
