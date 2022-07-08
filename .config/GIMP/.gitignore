@@ -1,0 +1,14 @@
+*/*
+!.gitignore
+!*/gradients/
+!*/palettes/
+!*/*rc
+!*/brushes/
+!*/themes/
+!*/patterns/
+!*/templates/
+!*/tool-options/
+!*/tool-presets/
+!*/curves/
+!*/icons/
+
