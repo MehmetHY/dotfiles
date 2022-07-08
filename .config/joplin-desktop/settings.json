@@ -1,0 +1,39 @@
+{
+	"$schema": "https://joplinapp.org/schema/settings.json",
+	"locale": "en_US",
+	"api.token": "4e32cd43a20d8ad3dec1d2f52c3160cee194af9d773b48e5ccdcdba35bdf378c638d749180810e5db02e7f7b57df97c6036a7a5a6d03f02635f85bdd8171b6c3",
+	"markdown.plugin.softbreaks": false,
+	"markdown.plugin.typographer": false,
+	"spellChecker.language": "en-US",
+	"ui.layout": {
+		"key": "root",
+		"children": [
+			{
+				"key": "sideBar",
+				"width": 178,
+				"visible": true
+			},
+			{
+				"key": "noteList",
+				"width": 181,
+				"visible": true
+			},
+			{
+				"key": "editor",
+				"visible": true
+			}
+		],
+		"visible": true
+	},
+	"noteVisiblePanes": [
+		"viewer"
+	],
+	"theme": 2,
+	"style.editor.fontFamily": "Hack Nf",
+	"style.editor.monospaceFontFamily": "Hack NF",
+	"editor.keyboardMode": "vim",
+	"sync.target": 3,
+	"notes.sortOrder.field": "title",
+	"notes.sortOrder.reverse": false,
+	"editor.codeView": true
+}

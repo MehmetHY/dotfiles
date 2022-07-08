@@ -50,6 +50,7 @@ if [ "$TERM" = "linux" ]; then
 	clear
 
     [[ ! -f ~/.p10k-tty.zsh ]] || source ~/.p10k-tty.zsh
+    setfont Lat2-TerminusBold24x12
 else
     [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 fi
@@ -108,4 +109,7 @@ alias nano="nvim"
 alias findf="sudo find / -type f -nowarn -iname"
 alias findd="sudo find / -type d -nowarn -iname"
 
+alias du="du -hcad 1"
+
 alias aria2c="aria2c -x 16 -s 16 -j 16 -m 0"
+

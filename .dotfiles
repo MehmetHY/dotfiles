@@ -1,8 +1,8 @@
-.bashrc
-.gtkrc-2.0
+scripts
+.themes
+.p10k-tty.zsh
+.p10k.zsh
+.xinitrc
 .Xresources
 .zsh_plugins.txt
 .zshrc
-scripts
-.p10k.zsh
-.themes
