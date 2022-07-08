@@ -17,7 +17,7 @@ m.show_error_popups = true
 -- works best with Hack Nerd Font
 -- m.workspaces = { "  ", "  ", "  ", "  ", " ﲵ ", "  ", "  ", "  ", "  " }
 m.workspaces = { "", "", "", "", "", "", "", "", "" }
-m.workspace_apps = { 'codium', 'joplin', 'okular', 'firefox', nil, 'inkscape', 'blender', 'krusader', 'steam' }
+m.workspace_apps = { 'code', 'joplin', 'okular', 'flatpak run org.mozilla.firefox', nil, 'inkscape', 'blender', 'ranger', 'steam' }
 -- icons/<your icon>.svg
 m.tag_icons = { 'dev', 'note', 'book', 'web', "console", '2d', '3d', 'explorer', 'game' }
 

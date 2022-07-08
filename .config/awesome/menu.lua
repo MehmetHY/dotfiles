@@ -7,17 +7,16 @@ local m = {}
 
 function m.setup(terminal)
     local favorite = {
-        { "Firefox", "firefox" },
-        { "VS Codium", "codium" },
+        { "Firefox", "flatpak run org.mozilla.firefox" },
+        { "VS Code", "code" },
         { "QtCreator", "qtcreator" },
+        { "Arduino", "arduino" },
         { "Joplin", "joplin" },
         { "Inkscape", "inkscape" },
         { "Drawio", "drawio" },
         { "Blender", "blender" },
-        -- { "Gimp", "flatpak run org.gimp.GIMP" },
         { "Gimp", "gimp" },
         { "Krita", "krita" },
-        { "Xtreme DM", "xdman"},
         { "LibreOffice", "libreoffice" },
         { "Okular", "okular" },
         { "KDE Connect", "kdeconnect-app" },
@@ -25,8 +24,7 @@ function m.setup(terminal)
     }
     
     local web = {
-        { "Firefox", "firefox" },
-        { "Xtreme DM", "xdman"},
+        { "Firefox", "flatpak run org.mozilla.firefox" },
         { "KDE Connect", "kdeconnect-app" }
     }
 
@@ -34,14 +32,14 @@ function m.setup(terminal)
         { "Inkscape", "inkscape" },
         { "Drawio", "drawio" },
         { "Blender", "blender" },
-        -- { "Gimp", "flatpak run org.gimp.GIMP" },
         { "Gimp", "gimp" },
         { "Krita", "krita" }
     }
 
     local dev = {
-        { "VS Codium", "codium" },
-        { "QtCreator", "qtcreator" }
+        { "VS Code", "code" },
+        { "QtCreator", "qtcreator" },
+        { "Arduino", "arduino" }
     }
 
     local office = {

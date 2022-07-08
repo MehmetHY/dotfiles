@@ -39,7 +39,7 @@ local function setup_signals(titlebar_size)
         "manage",
         function (w)
             prevent_offscreen(w)
-            -- awful.titlebar.hide(w)
+            awful.titlebar.hide(w)
 
             w.shape = function (cario, width, height)
                 gears.shape.rounded_rect(cario, width, height, m.border_radius)

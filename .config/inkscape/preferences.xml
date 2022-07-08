@@ -315,7 +315,7 @@
        id="lpetool"
        mode="drag"
        style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none;"
-       unit="px"
+       unit="mm"
        show_bbox="1" />
     <eventcontext
        id="text"
@@ -1049,7 +1049,7 @@
        icononly="1"
        small="0"
        iconsize="29"
-       width="52">
+       width="47">
       <group
          id="buttons" />
     </group>
@@ -1148,7 +1148,7 @@
   <group
      id="theme"
      defaultPreferDarkTheme="0"
-     defaultIconTheme="oomox-Minipiva"
+     defaultIconTheme="Adwaita"
      defaultGtkTheme="minipiva"
      narrowSpinButton="1"
      preferDarkTheme="0"

@@ -27,8 +27,6 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 if [ "$TERM" = "linux" ]; then
 	printf %b '\e[40m' '\e[8]' # set default background to color 0 'dracula-bg'
@@ -50,6 +48,10 @@ if [ "$TERM" = "linux" ]; then
 	printf %b '\e]P7f8f8f2'    # redefine 'white'          as 'dracula-fg'
 	printf %b '\e]PFffffff'    # redefine 'bright-white'   as '#ffffff'
 	clear
+
+    [[ ! -f ~/.p10k-tty.zsh ]] || source ~/.p10k-tty.zsh
+else
+    [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 fi
 
 
@@ -85,9 +87,11 @@ alias pamacu="sudo pamac upgrade -a"
 alias pamaco="pamac list -o"
 alias pamacc="sudo pamac clean"
 
-alias aptget="sudo apt-fast install"
-alias aptgrade="sudo apt-fast update && sudo apt-fast upgrade"
-alias aptup="sudo apt-fast update"
+alias apti="sudo apt-fast install"
+alias aptu="sudo apt-fast update && sudo apt-fast upgrade"
+alias apts="apt search"
+alias aptr="sudo apt remove"
+alias aptc="sudo apt autoremove"
 
 alias grep='grep --color=auto'
 
@@ -104,4 +108,4 @@ alias nano="nvim"
 alias findf="sudo find / -type f -nowarn -iname"
 alias findd="sudo find / -type d -nowarn -iname"
 
-alias aria2c="aria2c -x 16 -s 16 -j 16 -m 0 -t 1800"
+alias aria2c="aria2c -x 16 -s 16 -j 16 -m 0"
